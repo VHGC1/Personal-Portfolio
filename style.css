@@ -2,6 +2,34 @@
 @import "https://fonts.googleapis.com/css?family=Poppins:200i,300,400&display=swap";
 @import "https://fonts.googleapis.com/css?family=Raleway:700&display=swap";
 
+
+
+/*
+:root {
+  --white: #f0f0f0;
+  --red: #be3144;
+  --blue-hover-nav: #45567d;
+  --bg-card: #303841;
+  --hover-card: #ff7f50;
+}
+*/
+
+/* :root {
+  --white: #F1FAEE;
+  --red: #E63946;
+  --blue-hover-nav: #457B9D;
+  --bg-card: #1D3557;
+  --hover-card: #ff3949;
+} */
+
+:root {
+  --white: #F1FAEE;
+  --red: #E63946;
+  --blue-hover-nav: #2c2c2c;
+  --bg-card: #212121;
+  --hover-card: #ff3949;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -24,7 +52,7 @@ body {
   font-size: 1.8rem; 
   font-weight: 400;
   line-height: 1.4;
-  color: #f0f0f0;
+  color: var(--white);
 }
 
 h1, h2 {
@@ -39,7 +67,7 @@ li {
 
 a {
   text-decoration: none;
-  color: #f0f0f0;
+  color: var(--white);
 }
 
 img {
@@ -54,9 +82,9 @@ nav {
   top: 0;
   left: 0;
   width: 100%;
-  background-color: #be3144;
+  background-color: var(--red);
   align-items: center;
-  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
+  /* box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4); */
   z-index: 10;
 }
 
@@ -72,7 +100,7 @@ nav a {
 }
 
 nav a:hover {
-  background-color: #45567d;;
+  background-color: var(--blue-hover-nav);
 }
 
 .welcome {
@@ -81,9 +109,23 @@ nav a:hover {
   justify-content: center;
   width: 100%;
   height: 100vh;
-  background-color: black;
-  background-image: linear-gradient(62deg, #3a3d40 0%, #181719 100%);
+  background-color: white;
+  /* background-image: linear-gradient(62deg, #3a3d40 0%, #181719 100%); */
+  background-image: linear-gradient(50deg, #3b3b3b 0%, #212121 75%);
   align-items: center;
+}
+
+.welcome h1, p{
+  opacity: 0;
+  transform: translatex(-300px);
+  animation: welcome .3s forwards;
+}
+
+@keyframes welcome {
+  to {
+    opacity: 1;
+    transform: initial;
+  }
 }
 
 .welcome h1 {
@@ -94,19 +136,19 @@ nav a:hover {
   font-size: 3rem;
   font-weight: 200;
   font-style: italic;
-  color: #be3144;
+  color: var(--red);
 }
 
 .projects {
   text-align: center;
-  background-color: #45567d;
+  background-color: var(--blue-hover-nav);
   padding: 10rem 2rem;
 }
 
 .projects h2 {
   max-width: 640px;
   margin: 0 auto 6rem auto;
-  border-bottom: 0.2rem solid #f0f0f0;
+  border-bottom: 0.2rem solid var(--white);
 }
 
 .grid {
@@ -125,10 +167,11 @@ nav a:hover {
   object-fit: cover;
 }
 
-.grid a {
-  background-color: #303841;
+.grid .card {
+  background-color: var(--bg-card);
   box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
   border-radius: 2px;
+  cursor: pointer;
 }
 
 .grid p {
@@ -137,16 +180,16 @@ nav a:hover {
 }
 
 .code {
-  color: #303841;
+  color: var(--bg-card);
 }
 
 .card:hover .code{
-  color: #ff7f50;
+  color: var(--hover-card);
 }
 
 .btn {
-  background-color: #303841;
-  color: #f0f0f0;
+  background-color: var(--bg-card);
+  color: var(--white);
   text-decoration: none;
   padding: 10px;
   border-radius: 3px;
@@ -160,7 +203,7 @@ nav a:hover {
 }
 
 .btn:hover {
-  background-color: #be3144;
+  background-color: var(--red);
 }
 
 .btn:hover i{
@@ -174,7 +217,7 @@ nav a:hover {
   text-align: center;
   align-items: center;
   height: 80vh;
-  background-color: #303841;
+  background-color: var(--bg-card);
 }
 
 .contact h2 {
@@ -199,6 +242,7 @@ nav a:hover {
   font-size: 2.4rem;
   text-shadow: 2px 2px 1px #1f1f1f;
   transition: transform 0.3s ease-out;
+  cursor: pointer;
 }
 
 .contact-links a:hover {
@@ -207,12 +251,16 @@ nav a:hover {
 
 footer {
   display: flex;
-  border-top: 4px solid #be3144;
+  border-top: 4px solid var(--red);
   padding: 20px;
   justify-content: flex-end;
-  background-color: #303841;
+  background-color: var(--bg-card);
 }
 
 footer p {
   margin: 20px;
+}
+
+footer p a {
+  cursor: pointer;
 }
