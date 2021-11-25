@@ -104,35 +104,35 @@ nav a:hover {
 }
 
 .welcome {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 100%;
   height: 100vh;
-  background-color: white;
-  /* background-image: linear-gradient(62deg, #3a3d40 0%, #181719 100%); */
-  background-image: linear-gradient(50deg, #3b3b3b 0%, #212121 75%);
+  display: flex;
+  justify-content: center;
   align-items: center;
+  background-image: linear-gradient(50deg, #3b3b3b 0%, #212121 75%);
 }
 
-.welcome h1, p{
+.welcome .welcome-text {
+  text-align: center;
+}
+
+.welcome-text {
   opacity: 0;
-  transform: translatex(-300px);
-  animation: welcome .3s forwards;
+  transform: translateX(-300px);
+  animation: welcome-text .3s forwards;
 }
 
-@keyframes welcome {
+@keyframes welcome-text {
   to {
     opacity: 1;
     transform: initial;
   }
 }
 
-.welcome h1 {
+.welcome-text h1 {
   font-size: 6rem;
 }
 
-.welcome p{
+.welcome-text p{
   font-size: 3rem;
   font-weight: 200;
   font-style: italic;
@@ -263,4 +263,9 @@ footer p {
 
 footer p a {
   cursor: pointer;
+  transition: .3s ease;
+}
+
+footer p a:hover {
+  color: var(--red);
 }
