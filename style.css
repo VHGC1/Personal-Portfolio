@@ -2,30 +2,10 @@
 @import "https://fonts.googleapis.com/css?family=Poppins:200i,300,400&display=swap";
 @import "https://fonts.googleapis.com/css?family=Raleway:700&display=swap";
 
-
-
-/*
-:root {
-  --white: #f0f0f0;
-  --red: #be3144;
-  --blue-hover-nav: #45567d;
-  --bg-card: #303841;
-  --hover-card: #ff7f50;
-}
-*/
-
-/* :root {
-  --white: #F1FAEE;
-  --red: #E63946;
-  --blue-hover-nav: #457B9D;
-  --bg-card: #1D3557;
-  --hover-card: #ff3949;
-} */
-
 :root {
   --white: #F1FAEE;
   --red: #E63946;
-  --blue-hover-nav: #2c2c2c;
+  --bg-projects: #2c2c2c;
   --bg-card: #212121;
   --hover-card: #ff3949;
 }
@@ -75,6 +55,8 @@ img {
   width: 100%;
 }
 
+/* NAVBAR */
+
 nav {
   position: fixed;
   display: flex;
@@ -84,7 +66,6 @@ nav {
   width: 100%;
   background-color: var(--red);
   align-items: center;
-  /* box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4); */
   z-index: 10;
 }
 
@@ -100,8 +81,10 @@ nav a {
 }
 
 nav a:hover {
-  background-color: var(--blue-hover-nav);
+  background-color: var(--bg-projects);
 }
+
+/* WELCOME SECTION */
 
 .welcome {
   height: 100vh;
@@ -139,9 +122,11 @@ nav a:hover {
   color: var(--red);
 }
 
+/* PROJECTS SECTION */
+
 .projects {
   text-align: center;
-  background-color: var(--blue-hover-nav);
+  background-color: var(--bg-projects);
   padding: 10rem 2rem;
 }
 
@@ -210,6 +195,8 @@ nav a:hover {
   transform: translateX(2px);
 }
 
+/* CONTACT SECTION */
+
 .contact {
   display: flex;
   flex-direction: column;
@@ -226,6 +213,7 @@ nav a:hover {
 
 .contact p {
   font-style: italic;
+  color: var(--red);
 }
 
 .contact-links {
@@ -248,6 +236,8 @@ nav a:hover {
 .contact-links a:hover {
   transform: translateY(8px);
 }
+
+/* FOOTER */
 
 footer {
   display: flex;
